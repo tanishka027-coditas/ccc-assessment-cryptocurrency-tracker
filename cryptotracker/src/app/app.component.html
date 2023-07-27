@@ -1,0 +1,33 @@
+<h2> CryptoCurrency Tracker</h2>
+<div class="container">
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Name</th>
+			<th scope="col">Symbol</th>
+      <th scope="col">Price Usd</th>
+			<th scope="col">Market Cap Usd</th>
+			<th scope="col">Rank</th>
+			<th scope="col"> Max Supply</th>
+			<th scope="col"> Change Percent 24Hr</th>
+			<th scope="col"> Volume Usd 24Hr</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let cryptoData of cryptoCurrencyInfo; index as i">
+			<th scope="row">{{ i + 1 }}</th>
+			<td>
+				{{ cryptoData.name }}
+			</td>
+			<td>{{ cryptoData.symbol }}</td>
+			<td>{{ cryptoData.priceUsd }}</td>
+			<td>{{ cryptoData.marketCapUsd }}</td>
+			<td>{{ cryptoData.rank }}</td>
+			<td>{{ cryptoData.maxSupply }}</td>
+			<td>{{ cryptoData.changePercent24Hr }}</td>
+			<td>{{ cryptoData.volumeUsd24Hr }}</td>
+		</tr>
+	</tbody>
+</table>
+</div>
